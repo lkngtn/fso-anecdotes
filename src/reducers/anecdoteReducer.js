@@ -27,6 +27,14 @@ export const vote = (id) => {
   }
 }
 
+export const addAnecdote = (content) => {
+  console.log('content', content)
+  return {
+    type: 'ADD_ANECDOTE',
+    data: { content }
+  }
+}
+
 const reducer = (state = initialState, action) => {
   console.log('state now: ', state)
   console.log('action', action)
